@@ -4,7 +4,7 @@ import { Heading } from '@chakra-ui/react'
 export default function ManageTokens() {
     return (
         <>
-        <Heading ml = {130} mt = {50}>Create Token</Heading>
+        <Heading ml = {130} mt = {50}>Your Tokens</Heading>
             <ManageTokenBody />
         </>
     );
