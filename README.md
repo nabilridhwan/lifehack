@@ -2,12 +2,6 @@
 
 Monorepo allows us to manage multiple packages in a single repository. This is useful for us to manage our packages and dependencies. This is also useful for sharing code between apps (e.g. `apps/web` and `apps/mobile`).
 
-## TODO:
-
--   prisma
--   eslint
--   prettier
-
 ## Contribute
 
 Copy paste `.env.example` to `.env` and fill in the values.
