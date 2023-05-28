@@ -11,6 +11,8 @@
 	},
 	"scripts": {
 		"dev": "tsc -w --preserveWatchOutput",
+		"db:push": "prisma db push",
+		"db:pull": "prisma db pull",
 		"build": "tsc"
 	}
 }
