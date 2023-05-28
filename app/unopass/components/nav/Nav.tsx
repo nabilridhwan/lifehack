@@ -15,15 +15,15 @@ export const links = [
         link: "/",
         name: "Home",
     },
-    { id: 2, link: "#manageTokens", name: "Manage Tokens" },
+    { id: 2, link: "/manage_tokens", name: "Manage Tokens" },
     {
         id: 3,
-        link: "#createTokens",
+        link: "/create_tokens",
         name: "Create Tokens",
     },
     {
         id: 4,
-        link: "#scanTokens",
+        link: "/scan_tokens",
         name: "Scan Tokens",
     },
  ];

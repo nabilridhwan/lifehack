@@ -3,6 +3,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import type { AppProps } from "next/app";
 import Sidebar from "../components/sidebar/Sidebar.tsx";
 import { extendTheme } from "@chakra-ui/react";
+import Nav from "../components/nav/Nav";
 
 const theme = extendTheme({
 	fonts: {
@@ -15,7 +16,7 @@ export default function App({ Component, pageProps }: AppProps) {
 	return (
 		<UserProvider>
 			<ChakraProvider theme = {theme}>
-				{/* <Sidebar /> */}
+				<Nav />
 				<Component {...pageProps} />
 			</ChakraProvider>
 		</UserProvider>
