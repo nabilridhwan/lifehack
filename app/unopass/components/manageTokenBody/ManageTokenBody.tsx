@@ -29,14 +29,27 @@ const Feature = ({ title, text, icon }: FeatureProps) => {
         </Stack>
     );
 };
+const myPropObject = {
+    name: 'Istanbul Trip Token',
+    generated: new Date('2022-10-11'),
+  };
+  const myPropObject2 = {
+    name: 'Bali Trip Token',
+    generated: new Date('2022-10-11'),
+  };
+
+  const myPropObject3 = {
+    name: 'Karachi Trip Token',
+    generated: new Date('2022-10-11'),
+  };
 
 export default function ManageTokenBody() {
     return (
         <Box p={14}>
             <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10} padding={25}>
-                <TokenCards />
-                <TokenCards />
-                <TokenCards />
+                <TokenCards myPropObject = {myPropObject}/>
+                <TokenCards myPropObject = {myPropObject2}/>
+                <TokenCards myPropObject = {myPropObject3}/>
                 {/* <Feature
                     icon={<Icon as={TfiPlus} w={10} h={10} />}
                     title={'Create Tokens'}
