@@ -1,0 +1,67 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id              String  @id @default(uuid())
+  email           String  @unique
+  name            String?
+  profile_picture String?
+  master_password String
+
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  Keys       Keys[]
+  Token      Token[]
+  TravelData TravelData[]
+}
+
+model Keys {
+  id             String @id @default(uuid())
+  user_id        String
+  travel_data_id Int
+  public_key     String
+  private_key    String
+
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  user User @relation(fields: [user_id], references: [id])
+}
+
+model Token {
+  id        String   @id @default(uuid())
+  user_id   String
+  token     String
+  status    String   @default("active")
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [user_id], references: [id])
+}
+
+model TravelData {
+  id      Int    @id @default(autoincrement())
+  user_id String
+
+  departure_time DateTime
+  arrival_time   DateTime
+  flight_number  String
+  seat_number    String
+  gate_number    String
+  terminal       String
+  airline        String
+  row_number     String
+
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  user User @relation(fields: [user_id], references: [id])
+}
