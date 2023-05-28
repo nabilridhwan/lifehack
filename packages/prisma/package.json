@@ -10,7 +10,7 @@
 		"typescript": "^5.0.4"
 	},
 	"scripts": {
-		"dev": "tsc -w --preserveWatchOutput",
+		"dev": "prisma studio",
 		"db:push": "prisma db push",
 		"db:pull": "prisma db pull",
 		"build": "tsc"
