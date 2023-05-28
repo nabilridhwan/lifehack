@@ -1,3 +1,11 @@
+import ManageTokenBody from "@/components/manageTokenBody/ManageTokenBody";
+import { Heading } from '@chakra-ui/react'
+
 export default function ManageTokens() {
-    return <h1> HI I am in Manage Tokens!!!!!</h1>
+    return (
+        <>
+        <Heading ml = {130} mt = {50}>Create Token</Heading>
+            <ManageTokenBody />
+        </>
+    );
 }

@@ -7,7 +7,7 @@ export default function Header ()  {
    return (
        <Box className='header'>
            <Box className='header__content'>
-               <Nav />
+               {/* <Nav /> */}
                <Hero />
            </Box>
        </Box>
