@@ -58,15 +58,15 @@ const TokenCards = chakra((props) => {
                     />
                 </Box>
                 <Stack pt={10} align={'center'}>
-                    {/* <Text color={'gray.500'} fontSize={'sm'} textTransform={'uppercase'}>
-              Brand
-            </Text> */}
+                    <Text color={'gray.500'} fontSize={'sm'} textTransform={'uppercase'}>
+                        Brand
+                    </Text>
                     <Heading fontSize={'2xl'} fontFamily={'body'} fontWeight={500}>
-                        {name}
+                        $57
                     </Heading>
                     <Stack direction={'row'} align={'center'}>
                         <Text fontWeight={800} fontSize={'xl'}>
-                            {generated}
+                            $199
                         </Text>
                     </Stack>
                 </Stack>

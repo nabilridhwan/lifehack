@@ -17,6 +17,41 @@ import {
 } from "@chakra-ui/react";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import Handler from "../api/test_request/index";
+import {
+	InternalServerErrorResponse,
+	SuccessResponse,
+} from "@unopass/responses";
+import type { NextApiRequest, NextApiResponse } from "next";
+
+async function handler(
+	req: NextApiRequest,
+	res: NextApiResponse<any>
+) {
+    const data = {hello: 'greeting'};
+	try {
+		if (req.method === "GET") {
+			return new SuccessResponse(
+				"Hello",
+				data
+			).handleResponse(req, res);
+		}
+	} catch (error: any) {
+		return new InternalServerErrorResponse(
+			error.message,
+			error
+		).handleResponse(req, res);
+	}
+}
+
+async function getStaticProps(context) {
+    // We will fetch the blog posts here
+  const data = await handler(req: NextApiRequest, res: NextApiResponse<any>);
+
+    return {
+      props: {} // props will be passed to the page
+    };
+  }
 
 export default function LandingPage() {
 	const router = useRouter();
