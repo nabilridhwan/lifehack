@@ -44,14 +44,14 @@ async function handler(
 	}
 }
 
-async function getStaticProps(context) {
-    // We will fetch the blog posts here
-  const data = await handler(req: NextApiRequest, res: NextApiResponse<any>);
+// async function getStaticProps(context) {
+//     // We will fetch the blog posts here
+//   const data = await handler(req: NextApiRequest, res: NextApiResponse<any>);
 
-    return {
-      props: {} // props will be passed to the page
-    };
-  }
+//     return {
+//       props: {} // props will be passed to the page
+//     };
+//   }
 
 export default function LandingPage() {
 	const router = useRouter();
