@@ -1,8 +1,5 @@
-import { ReactElement } from 'react';
-import { Box, SimpleGrid, Icon, Text, Stack, Flex } from '@chakra-ui/react';
-import { FcAssistant, FcDonate, FcInTransit } from 'react-icons/fc';
-import {BiBarcode} from 'react-icons/bi';
-import { TfiPlus,TfiSupport } from "react-icons/tfi";
+import { Box, Flex, SimpleGrid, Stack, Text } from "@chakra-ui/react";
+import { ReactElement } from "react";
 import TokenCards from "../tokenCards/TokenCards";
 import {TravelData} from "../../pages/manage_tokens/index"
 interface FeatureProps {
