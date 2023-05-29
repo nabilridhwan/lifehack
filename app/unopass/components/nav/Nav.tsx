@@ -12,11 +12,11 @@ export const links = [
 		link: "/create_tokens",
 		name: "Create Tokens",
 	},
-	{
-		id: 4,
-		link: "/scan_tokens",
-		name: "Scan Tokens",
-	},
+	// {
+	// 	id: 4,
+	// 	link: "/scan_tokens",
+	// 	name: "Scan Tokens",
+	// },
 ];
 
 const Nav = () => {
