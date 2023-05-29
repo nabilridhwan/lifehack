@@ -19,7 +19,8 @@
 		"app/*"
 	],
 	"dependencies": {
-		"dotenv-cli": "latest"
+		"dotenv-cli": "latest",
+		"react-icons": "^4.9.0"
 	},
 	"devDependencies": {
 		"turbo": "^1.9.9"

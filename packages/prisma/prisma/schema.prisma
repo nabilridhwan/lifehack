@@ -26,20 +26,19 @@ model User {
 }
 
 model Keys {
-  id             String @id @default(uuid())
-  user_id        String
-  travel_data_id Int
+  id      String @id @default(uuid())
+  user_id String
 
-  encrypted_public_key  String
+  public_key            String
   encrypted_private_key String
-  public_iv             String
   private_iv            String
 
   created_at DateTime @default(now())
   updated_at DateTime @updatedAt
 
-  user        User       @relation(fields: [user_id], references: [id])
-  travel_data TravelData @relation(fields: [travel_data_id], references: [id])
+  user         User        @relation(fields: [user_id], references: [id])
+  TravelData   TravelData? @relation(fields: [travelDataId], references: [id])
+  travelDataId Int?
 }
 
 model Token {
