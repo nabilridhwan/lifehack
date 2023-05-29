@@ -50,6 +50,8 @@ export default function CreateTokens({ totalData }: { totalData: TravelData }) {
                     </Container>
                     <Container maxW='2550px' bg='grey' color='black'>
                         {/* console.log(new Intl.DateTimeFormat('en-GB', { dateStyle: 'full', timeStyle: 'long', timeZone: 'Australia/Sydney' }).format(date2)); */}
+                        Departure: 20/05/22 11pm SGT
+
 
                         {/* {new Intl.DateTimeFormat('en-GB', { dateStyle: 'full', timeStyle: 'long', timeZone: 'Australia/Sydney' }).format(data.departure_time)} */}
                     </Container>
@@ -60,32 +62,21 @@ export default function CreateTokens({ totalData }: { totalData: TravelData }) {
                     </Container>
                     <Container maxW='2550px' bg='grey' color='black'>
                         {/* {totalData.arrival_time} */}
+                        Arrival: 21/05/22 2pm SGT
+
+
                     </Container>
                 </HStack>
-                <HStack>
-                    <Container maxW='2x1' bg='grey' color='black'>
-                        Hotel Name:
-                    </Container>
-                    <Container maxW='2550px' bg='grey' color='black'>
-                        "550px" Container
-                    </Container>
-                </HStack>
+              
                 <HStack>
                     <Container maxW='2x1' bg='grey' color='black'>
                         Flight Number:
                     </Container>
                     <Container maxW='2550px' bg='grey' color='black'>
-                        "550px" Container
+                    SQ2490
                     </Container>
                 </HStack>
-                <HStack>
-                    <Container maxW='2x1' bg='grey' color='black'>
-                        Passport Number:
-                    </Container>
-                    <Container maxW='2550px' bg='grey' color='black'>
-                        "550px" Container
-                    </Container>
-                </HStack>
+              
             </Container>
             <Button bg='teal' variant='solid'>
                 <Link href="/token_created_page">

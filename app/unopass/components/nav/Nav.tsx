@@ -7,11 +7,11 @@ export const links = [
 		name: "Home",
 	},
 	{ id: 2, link: "/manage_tokens", name: "Manage Tokens" },
-	{
-		id: 3,
-		link: "/create_tokens",
-		name: "Create Tokens",
-	},
+	// {
+	// 	id: 3,
+	// 	link: "/create_tokens",
+	// 	name: "Create Tokens",
+	// },
 	// {
 	// 	id: 4,
 	// 	link: "/scan_tokens",
