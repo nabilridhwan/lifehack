@@ -29,22 +29,27 @@ model Keys {
   id             String @id @default(uuid())
   user_id        String
   travel_data_id Int
-  public_key     String
-  private_key    String
+
+  encrypted_public_key  String
+  encrypted_private_key String
+  public_iv             String
+  private_iv            String
 
   created_at DateTime @default(now())
   updated_at DateTime @updatedAt
 
-  user User @relation(fields: [user_id], references: [id])
+  user        User       @relation(fields: [user_id], references: [id])
+  travel_data TravelData @relation(fields: [travel_data_id], references: [id])
 }
 
 model Token {
-  id        String   @id @default(uuid())
-  user_id   String
-  token     String
-  status    String   @default("active")
-  createdAt DateTime @default(now())
-  user      User     @relation(fields: [user_id], references: [id])
+  id              String   @id @default(uuid())
+  user_id         String
+  encrypted_token String
+  status          String   @default("active")
+  created_at      DateTime @default(now())
+  updated_at      DateTime @updatedAt
+  user            User     @relation(fields: [user_id], references: [id])
 }
 
 model TravelData {
@@ -63,5 +68,6 @@ model TravelData {
   created_at DateTime @default(now())
   updated_at DateTime @updatedAt
 
-  user User @relation(fields: [user_id], references: [id])
+  user User   @relation(fields: [user_id], references: [id])
+  Keys Keys[]
 }
