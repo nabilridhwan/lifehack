@@ -51,7 +51,7 @@ export default function CreateTokens({ totalData }: { totalData: TravelData }) {
                     <Container maxW='2550px' bg='grey' color='black'>
                         {/* console.log(new Intl.DateTimeFormat('en-GB', { dateStyle: 'full', timeStyle: 'long', timeZone: 'Australia/Sydney' }).format(date2)); */}
 
-                        {new Intl.DateTimeFormat('en-GB', { dateStyle: 'full', timeStyle: 'long', timeZone: 'Australia/Sydney' }).format(data.departure_time)}
+                        {/* {new Intl.DateTimeFormat('en-GB', { dateStyle: 'full', timeStyle: 'long', timeZone: 'Australia/Sydney' }).format(data.departure_time)} */}
                     </Container>
                 </HStack>
                 <HStack>
