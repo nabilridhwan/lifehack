@@ -48,12 +48,12 @@ export default function TokenCreatedPage() {
 					</Stack>
 				</Box>
 
-				<Box borderRadius={5} bg="whiteAlpha.100" p={5}>
+				{/* <Box borderRadius={5} bg="whiteAlpha.100" p={5}>
 					<Text>
 						This QR Code can be used by the user to redeem their
 						token
 					</Text>
-				</Box>
+				</Box> */}
 			</Stack>
 		</>
 	);

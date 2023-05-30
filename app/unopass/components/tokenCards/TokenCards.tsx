@@ -8,6 +8,8 @@ import {
     chakra,
     useColorModeValue,
 } from "@chakra-ui/react";
+import { Link } from '@chakra-ui/react'
+
 import {TravelData} from "../../pages/manage_tokens/index"
 
 const IMAGE =
@@ -102,7 +104,12 @@ const TokenCards: React.FC<TokenCardsProps> = ({myPropObject}) => {
                     </Text>
                     <Stack direction={"row"} align={"center"}>
 
-                        <Button>Generate QR Code</Button>
+                        <Button>
+
+                            <Link href = "/create_tokens">
+                            Generate QR Code
+                            </Link>
+                        </Button>
                     </Stack>
                 </Stack>
             </Box>
