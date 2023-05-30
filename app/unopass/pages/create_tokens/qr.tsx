@@ -1,6 +1,12 @@
-import { Box, Icon, Stack, Text } from "@chakra-ui/react";
+import {
+	Alert,
+	AlertDescription,
+	AlertIcon,
+	AlertTitle,
+	Box,
+	Stack,
+} from "@chakra-ui/react";
 import { useQRCode } from "next-qrcode";
-import { BiPaperPlane } from "react-icons/bi";
 
 export default function TokenCreatedPage() {
 	const { Canvas } = useQRCode();
@@ -23,30 +29,14 @@ export default function TokenCreatedPage() {
 						}}
 					/>
 				</Box>
-				<Box borderRadius={5} bg="whiteAlpha.100" p={5}>
-					<Stack>
-						<Stack
-							direction={"row"}
-							alignItems={"center"}
-							textColor={"gray.400"}
-						>
-							<Icon
-								w={8}
-								h={8}
-								alignItems={"center"}
-								justifyContent={"center"}
-							>
-								<BiPaperPlane />
-							</Icon>
 
-							<Text>Airline</Text>
-						</Stack>
-						<Text>
-							This QR Code can be used by the user to redeem their
-							token
-						</Text>
-					</Stack>
-				</Box>
+				<Alert status="success" w={600}>
+					<AlertIcon />
+					<AlertTitle>QR Code Generated</AlertTitle>
+					<AlertDescription>
+						Use this QR code to board your flight
+					</AlertDescription>
+				</Alert>
 
 				{/* <Box borderRadius={5} bg="whiteAlpha.100" p={5}>
 					<Text>

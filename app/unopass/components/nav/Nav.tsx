@@ -1,4 +1,14 @@
-import { Box, Flex, HStack, Heading, Link, Spacer } from "@chakra-ui/react";
+import { useUser } from "@auth0/nextjs-auth0/client";
+import {
+	Box,
+	Button,
+	Flex,
+	HStack,
+	Heading,
+	Link,
+	Spacer,
+} from "@chakra-ui/react";
+import { useRouter } from "next/router";
 
 export const links = [
 	{
@@ -20,6 +30,9 @@ export const links = [
 ];
 
 const Nav = () => {
+	const router = useRouter();
+	const { user } = useUser();
+
 	return (
 		<Flex
 			w="full"
@@ -29,7 +42,13 @@ const Nav = () => {
 			justifyContent="space-between"
 		>
 			<Box>
-				<Heading as="h2" size="md">
+				<Heading
+					as="h2"
+					size="md"
+					onClick={() => {
+						router.push("/");
+					}}
+				>
 					UNOPASS
 				</Heading>
 			</Box>
@@ -53,6 +72,24 @@ const Nav = () => {
 			</HStack>
 
 			<Spacer />
+
+			{user ? (
+				<Button
+					onClick={() => {
+						router.push("/api/auth/logout");
+					}}
+				>
+					Log Out
+				</Button>
+			) : (
+				<Button
+					onClick={() => {
+						router.push("/api/auth/login");
+					}}
+				>
+					Log In
+				</Button>
+			)}
 		</Flex>
 	);
 };
